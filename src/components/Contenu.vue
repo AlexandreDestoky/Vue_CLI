@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Liste from "./Liste.vue";
+import Liste from "./Liste/Liste.vue";
 
 export default {
   name: "Contenu",
