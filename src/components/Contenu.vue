@@ -2,7 +2,7 @@
   <div>
     <h1>Bienvenue</h1>
     <p>On va faire du VUE JS ici</p>
-    <liste :prenom="name" :ville="village"></liste>
+    <liste :prenom="name" :ville="village" :legacy="heritage"></liste>
     <!-- <liste :prenom="firstname"/> -->
   </div>
 </template>
@@ -15,7 +15,10 @@ export default {
   data() {
     return {
       name: ["Alexandre","Andre","Thomas"],
-      village: "Compogne"
+      village: "Compogne",
+      heritage() {
+        console.log("hérité depuis contenu");
+      }
     }
   },
   components: {
