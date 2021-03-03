@@ -17,10 +17,6 @@ export default {
 </script>
 
 
-<style scoped>
- ul {
-   background-color:lightcyan;
-   font-size:20px;
-   font-family: 'Courier New', Courier, monospace;
- }
+<style scoped src="./Liste.css">
+
 </style>
