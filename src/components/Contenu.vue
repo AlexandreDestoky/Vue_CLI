@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h1>Bienvenue {{prenom}}</h1>
+    <h1>Bienvenue</h1>
     <p>On va faire du VUE JS ici</p>
-    <liste/>
+    <liste :prenom="firstname"></liste>
+    <!-- <liste :prenom="firstname"/> -->
   </div>
 </template>
 
@@ -13,12 +14,12 @@ export default {
   name: "Contenu",
   data() {
     return {
-      prenom: "Alexandre"
+      firstname: "Alexandre",
     }
   },
   components: {
     "liste": Liste
-  }
+  },
 };
 </script>
 
