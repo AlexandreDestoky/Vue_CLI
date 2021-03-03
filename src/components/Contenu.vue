@@ -2,7 +2,7 @@
   <div>
     <h1>Bienvenue</h1>
     <p>On va faire du VUE JS ici</p>
-    <liste :prenom="firstname"></liste>
+    <liste :prenom="name" :ville="village"></liste>
     <!-- <liste :prenom="firstname"/> -->
   </div>
 </template>
@@ -14,7 +14,8 @@ export default {
   name: "Contenu",
   data() {
     return {
-      firstname: "Alexandre",
+      name: ["Alexandre","Andre","Thomas"],
+      village: "Compogne"
     }
   },
   components: {

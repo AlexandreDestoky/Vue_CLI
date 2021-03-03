@@ -3,7 +3,8 @@
   <ul class="liste">
     <li v-for="(prenom,index) of tabPrenoms" v-bind:key="index">{{prenom}} à réussi son examen</li>
   </ul>
-  <p>{{prenom}}</p>
+  <p>{{prenom[1]}}</p>
+  <p>{{reversing()}}</p>
 </div>
 </template>
 
@@ -16,7 +17,12 @@ export default {
       tabPrenoms: ["Jean","Marc","Julien","Andre"]
     }
   },
-  props: ["prenom"]
+  props: ["prenom","ville"],
+  methods:{
+    reversing() {
+      return this.ville.split("").reverse().join("");
+    }
+  }
 }
 </script>
 
