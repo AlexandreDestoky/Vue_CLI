@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="liste">
-      <li v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{ prenom }} à réussi son examen</li>
+      <li v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{index}}.{{ prenom }} à réussi son examen</li>
     </ul>
     <p>{{ prenom[1] }}</p>
     <p>{{ reversing() }}</p>
