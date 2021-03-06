@@ -6,6 +6,7 @@
     <p>{{ prenom[1] }}</p>
     <p>{{ reversing() }}</p>
     <p>{{legacy()}}</p>
+    <p v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{presentation(prenom)}}</p>
   </div>
 </template>
 
@@ -35,6 +36,9 @@ export default {
         .reverse()
         .join("");
     },
+    presentation(nom) {
+      return `Salut ${nom} comment-vas tu ?`;
+    }
   },
 };
 </script>
