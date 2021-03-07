@@ -7,6 +7,7 @@
     <p>{{ reversing() }}</p>
     <p>{{legacy()}}</p>
     <p v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{presentation(prenom)}}</p>
+    <button @click="test">Test</button>
   </div>
 </template>
 
@@ -38,6 +39,9 @@ export default {
     },
     presentation(nom) {
       return `Salut ${nom} comment-vas tu ?`;
+    },
+    test() {
+      console.log("test");
     }
   },
 };
