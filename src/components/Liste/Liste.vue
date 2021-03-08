@@ -8,6 +8,7 @@
     <p>{{legacy()}}</p>
     <p v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{presentation(prenom)}}</p>
     <button @click="test">Test</button>
+    <input type="checkbox" v-model="boule">
   </div>
 </template>
 
@@ -17,6 +18,7 @@ export default {
   data() {
     return {
       tabPrenoms: ["Jean", "Marc", "Julien", "Andre"],
+      boule:true,
     };
   },
   props: { 
