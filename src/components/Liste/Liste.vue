@@ -9,6 +9,7 @@
     <p v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{presentation(prenom)}}</p>
     <button @click="test">Test</button>
     <input type="checkbox" v-model="boule">
+    <input type="date" v-model="anniversaire">
   </div>
 </template>
 
@@ -19,6 +20,7 @@ export default {
     return {
       tabPrenoms: ["Jean", "Marc", "Julien", "Andre"],
       boule:true,
+      anniversaire:"1997-02-05"
     };
   },
   props: { 
