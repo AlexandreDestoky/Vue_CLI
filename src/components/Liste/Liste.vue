@@ -10,14 +10,17 @@
     <button @click="test">Test</button>
     <input type="checkbox" v-model="boule">
     <input type="date" v-model="anniversaire">
+    <input type="email" v-model="monEmail">
   </div>
 </template>
 
 <script>
 export default {
   name: "Liste",
+
   data() {
     return {
+      monEmail: "adestoky@yahoo.fr",
       tabPrenoms: ["Jean", "Marc", "Julien", "Andre"],
       boule:true,
       anniversaire:"1997-02-05"
