@@ -11,6 +11,7 @@
     <input type="checkbox" v-model="boule">
     <input type="date" v-model="anniversaire">
     <input type="email" v-model="monEmail">
+    <input type="password" v-model="mdp">
   </div>
 </template>
 
@@ -23,7 +24,8 @@ export default {
       monEmail: "adestoky@yahoo.fr",
       tabPrenoms: ["Jean", "Marc", "Julien", "Andre"],
       boule:true,
-      anniversaire:"1997-02-05"
+      anniversaire:"1997-02-05",
+      mdp:"salut"
     };
   },
   props: { 
