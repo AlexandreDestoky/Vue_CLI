@@ -12,6 +12,7 @@
     <input type="date" v-model="anniversaire">
     <input type="email" v-model="monEmail">
     <input type="password" v-model="mdp">
+    <input type="color" v-model="favColor">
   </div>
 </template>
 
@@ -25,7 +26,8 @@ export default {
       tabPrenoms: ["Jean", "Marc", "Julien", "Andre"],
       boule:true,
       anniversaire:"1997-02-05",
-      mdp:"salut"
+      mdp:"salut",
+      favColor : "#c5e3b8"
     };
   },
   props: { 
