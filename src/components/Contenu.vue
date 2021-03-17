@@ -14,21 +14,21 @@ export default {
   name: "Contenu",
   data() {
     return {
-      name: ["Alexandre","Andre","Thomas"],
+      name: ["Alexandre", "Andre", "Thomas"],
       village: "Compogne",
       heritage() {
-        console.log("hérité depuis contenu");
-      }
-    }
+        // console.log("hérité depuis contenu");
+      },
+    };
   },
   components: {
-    "liste": Liste
+    liste: Liste,
   },
 };
 </script>
 
 <style scoped>
-  h1 {
-    text-decoration: underline;
-  }
+h1 {
+  text-decoration: underline;
+}
 </style>

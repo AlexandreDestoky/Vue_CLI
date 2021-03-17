@@ -1,18 +1,21 @@
 <template>
   <div>
     <ul class="liste">
-      <li v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{index}}.{{ prenom }} à réussi son examen</li>
+      <li v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{ index }}.{{ prenom }} à réussi son examen</li>
     </ul>
     <p>{{ prenom[1] }}</p>
     <p>{{ reversing() }}</p>
-    <p>{{legacy()}}</p>
-    <p v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{presentation(prenom)}}</p>
+    <p>{{ legacy() }}</p>
+    <p v-for="(prenom, index) of tabPrenoms" v-bind:key="index">{{ presentation(prenom) }}</p>
     <button @click="test">Test</button>
-    <input type="checkbox" v-model="boule">
-    <input type="date" v-model="anniversaire">
-    <input type="email" v-model="monEmail">
-    <input type="password" v-model="mdp">
-    <input type="color" v-model="favColor">
+    <input type="checkbox" v-model="boule" />
+    <input type="date" v-model="anniversaire" />
+    <input type="email" v-model="monEmail" />
+    <input type="password" v-model="mdp" />
+    <input type="color" v-model="favColor" />
+    <hr />
+    <input type="text" v-model="recherche" />
+    <p>{{ affiche() }}</p>
   </div>
 </template>
 
@@ -24,23 +27,24 @@ export default {
     return {
       monEmail: "adestoky@yahoo.fr",
       tabPrenoms: ["Jean", "Marc", "Julien", "Andre"],
-      boule:true,
-      anniversaire:"1997-02-05",
-      mdp:"salut",
-      favColor : "#c5e3b8"
+      boule: true,
+      anniversaire: "1997-02-05",
+      mdp: "salut",
+      favColor: "#c5e3b8",
+      recherche: "",
     };
   },
-  props: { 
+  props: {
     prenom: {
-      type: Array
-    }, 
+      type: Array,
+    },
     ville: {
-      type: String
+      type: String,
     },
     legacy: {
-      type: Function
-    }
-   },
+      type: Function,
+    },
+  },
   methods: {
     reversing() {
       return this.ville
@@ -53,8 +57,12 @@ export default {
     },
     test() {
       console.log("test");
-    }
+    },
+    affiche(recherche) {
+      console.log("le mot écrit est : " + recherche);
+    },
   },
+  computed: {},
 };
 </script>
 
