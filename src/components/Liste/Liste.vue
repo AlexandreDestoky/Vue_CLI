@@ -15,6 +15,8 @@
     <input type="color" v-model="favColor" />
     <hr />
     <input type="text" v-model="recherche" />
+    <input type="range" max="5" v-model="niveau" />
+
     <p>{{ affiche() }}</p>
   </div>
 </template>
@@ -32,6 +34,7 @@ export default {
       mdp: "salut",
       favColor: "#c5e3b8",
       recherche: "",
+      niveau: 4,
     };
   },
   props: {
