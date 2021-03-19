@@ -16,6 +16,7 @@
     <hr />
     <input type="text" v-model="recherche" />
     <input type="range" max="5" v-model="niveau" />
+    <input type="week" v-model="semaine" />
 
     <p>{{ affiche() }}</p>
   </div>
@@ -35,6 +36,7 @@ export default {
       favColor: "#c5e3b8",
       recherche: "",
       niveau: 4,
+      semaine: "2018-W18",
     };
   },
   props: {
