@@ -17,6 +17,7 @@
     <input type="text" v-model="recherche" />
     <input type="range" max="5" v-model="niveau" />
     <input type="week" v-model="semaine" />
+    <input type="tel" pattern="[0-9]{10}" v-model="monNum" />
 
     <p>{{ affiche() }}</p>
   </div>
@@ -37,6 +38,7 @@ export default {
       recherche: "",
       niveau: 4,
       semaine: "2018-W18",
+      monNum: "0475573885",
     };
   },
   props: {
