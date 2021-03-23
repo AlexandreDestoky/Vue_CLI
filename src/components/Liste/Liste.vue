@@ -19,6 +19,7 @@
     <input type="week" v-model="semaine" />
     <input type="tel" pattern="[0-9]{10}" v-model="monNum" />
     <input type="number" v-model="monNombre" />
+    <p>salut je m'appelle {{ prenom[1] }}</p>
 
     <p>{{ affiche() }}</p>
   </div>
