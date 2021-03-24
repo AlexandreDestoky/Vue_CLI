@@ -22,6 +22,7 @@
     <p>salut je m'appelle {{ prenom[1] }}</p>
 
     <p>{{ affiche() }}</p>
+    <p v-if="niveau > 5">Beaucoup de niveau !</p>
   </div>
 </template>
 
@@ -38,7 +39,7 @@ export default {
       mdp: "salut",
       favColor: "#c5e3b8",
       recherche: "",
-      niveau: 4,
+      niveau: 6,
       semaine: "2018-W18",
       monNum: "0475573885",
       monNombre: "24",
