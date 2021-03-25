@@ -23,6 +23,7 @@
 
     <p>{{ affiche() }}</p>
     <p v-if="niveau > 5">Beaucoup de niveau !</p>
+    <input type="button" v-model="btn" />
   </div>
 </template>
 
@@ -43,6 +44,7 @@ export default {
       semaine: "2018-W18",
       monNum: "0475573885",
       monNombre: "24",
+      btn: "mon beau bouton",
     };
   },
   props: {
